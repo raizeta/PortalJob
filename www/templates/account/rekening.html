@@ -1,0 +1,27 @@
+<ion-view view-title="Rekening">
+  <ion-content class="layerbackground">
+    <ion-item>
+      <form name="rekeningForm" novalidate="true">
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Nama Bank</span>
+          <input type="text" name="rektujuan" ng-model="newrekening.NAMA_BANK"  class="custom-success" required>
+        </label>
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Nomor Rekening</span>
+          <input type="text" name="nomorrektujuan" ng-model="newrekening.NOMOR_REKENING"  class="custom-success" required>
+        </label>
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Pemilik Rekening</span>
+          <input type="text" name="pemilikrekening" ng-model="newrekening.NAMA_PEMILIK" class="custom-success" required>
+        </label>
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Kantor Cabang</span>
+          <input type="text" name="pemilikrekening" ng-model="newrekening.KA_CABANG" class="custom-success" required>
+        </label>
+        <button  class="button button-block button-calm" ng-click="submitnewrekening()" ng-disabled="rekeningForm.$invalid">
+          Submit
+        </button>
+      </form>
+    </ion-item>
+  </ion-content>
+</ion-view>

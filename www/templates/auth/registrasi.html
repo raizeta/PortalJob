@@ -1,0 +1,31 @@
+<ion-view  hide-nav-bar="false" title="FORM REGISTRASI">
+    <ion-content padding="true" scroll="true" has-bouncing="true" class="layerbackground">
+        <ion-list>
+            <ion-item>
+              <form name="registrasiForm" novalidate="true">
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Email</span>
+                  <input type="email" name="alamatemail" ng-model="newmember.ALAMAT_EMAIL"  class="custom-success"required>
+
+                </label>
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Password</span>
+                  <input type="password" name="password" ng-model="newmember.USER_PASSWORD"  class="custom-success" required>
+                </label>
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Nama Lengkap</span>
+                  <input type="text" name="namalengkap" ng-model="newmember.NAMA_LENGKAP"  class="custom-success" required>
+                </label>
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Nomor Handphone</span>
+                  <input type="text" name="nomorhandphone" ng-model="newmember.NOMOR_HANDPHONE"  class="custom-success" required>
+                </label>
+
+                <button  class="button button-block button-calm" ng-click="registrasinewmember()" ng-disabled="registrasiForm.$invalid">
+                  SignUp
+                </button>
+              </form>
+            </ion-item>
+        </ion-list>
+  </ion-content>
+</ion-view>

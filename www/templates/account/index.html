@@ -1,0 +1,43 @@
+<ion-view view-title="Account">
+  <ion-content class="layerbackground">
+    <ion-list>
+	    <div class="profile text-center" style="margin-top: 5px;">
+	        <img class="profile-picture" data-ng-src="img/lg_telkomsel.png" />
+	        <h4 class="profile-name">{{userprofile.NAMA_LENGKAP}}</h4>
+	    </div>
+      <ion-item class="item item-divider item-balanced">
+        <h2 style="color: white">Social Media</h2>
+      </ion-item>
+      <ul class="list">
+        <li class="item item-toggle">
+           Login Dengan Facebook
+           <label class="toggle toggle-positive">
+             <input type="checkbox">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+           </label>
+        </li>
+        <li class="item item-toggle">
+           Login Dengan Gmail
+           <label class="toggle toggle-assertive">
+             <input type="checkbox">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+           </label>
+        </li>
+      </ul>
+      <ion-item class="item item-divider item-balanced" style="margin-top: -20px;">
+        <h2 style="color: white;"></h2>
+      </ion-item>
+      <ion-item class="item-icon-right" type="item-text-wrap" ng-click="logout()">
+          Log Out
+          <i class="icon ion-chevron-right"></i>
+      </ion-item>
+      <ion-item class="item item-divider item-balanced">
+        <h2 style="color: white;"></h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

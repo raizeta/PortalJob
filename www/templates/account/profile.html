@@ -1,0 +1,27 @@
+<ion-view view-title="Profile">
+  <ion-content class="layerbackground">
+    <ion-item>
+      <form name="profileForm" novalidate="true">
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Nomor KTP</span>
+          <input type="text" name="noktp" ng-model="profile.NO_KTP"  minlength="16" maxlength="16" class="custom-success" required>
+        </label>
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Nama Lengkap</span>
+          <input type="text" name="namalengkap" ng-model="profile.NAMA_LENGKAP"  class="custom-success" required>
+        </label>
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Tempat Lahir</span>
+          <input type="text" name="tempatlahir" ng-model="profile.TEMPAT_LAHIR" class="custom-success" required>
+        </label>
+        <label class="item item-input item-stacked-label border-bottom">
+         <span class="input-label">Tanggal Lahir</span>
+          <input type="date" name="tanggallahir" ng-model="profile.TANGGAL_LAHIR" class="custom-success" required>
+        </label>
+        <button  class="button button-block button-calm" ng-click="submitprofileform()" ng-disabled="profileForm.$invalid">
+          Submit
+        </button>
+      </form>
+    </ion-item>
+  </ion-content>
+</ion-view>

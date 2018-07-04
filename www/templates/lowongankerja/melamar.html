@@ -1,0 +1,84 @@
+<ion-view view-title="Melamar">
+  <ion-content class="layerbackground">
+  	<div class="list card no-padding">
+        <ion-item class="item item-remove-animate item-avatar item-icon-right item-stable" type="item-text-wrap" style="padding-left: 72px;">
+            <img ng-src="img/lg_token.png">
+            <h2>{{lowongan.NAMA_LOWONGAN}}</h2>
+            <h2>{{lowongan.NAMA_PERUSAHAAN}}</h2>
+            <i class="icon ion-star" ng-class="{emas: apakahdisimpan(lowongan)}" ng-click="addorremove(lowongan)" style="font-size: 36px;"></i>
+        </ion-item>
+        <div>
+          <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+            <i class="icon ion-ios-location-outline"></i>
+              <h2>{{lowongan.LOKASI_PERUSAHAAN}}</h2>
+          </ion-item>
+          <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+            <i class="icon ion-cash placeholder-icon"></i>
+              <h2>Rp {{lowongan.MIN_GAJI|number}} - {{lowongan.MAX_GAJI|number}}</h2>
+          </ion-item>
+      	</div>
+    </div>
+    <div class="list card no-padding">
+        <ion-item class="item" style="border:0px;">
+            <h2>Requirements</h2>
+        </ion-item>
+        <ul>
+	        <li>
+				<div>Pendidikan minimal S1 jurusan IT</div>
+			</li>
+			<li>Fresh graduate/ berpengalaman maksimal 2 tahun di posisi yang sama</li>
+			<li>Menguasai Pemrograman PHP, SQL</li>
+			<li>Menguasai Javascript, HTML, CSS dan AJAX</li>
+			<li>Menguasai Framework PHP (CodeIgniter)</li>
+			<li>Menguasai salah satu Framework Javascript (Jquery, Angular)</li>
+			<li>Menguasai Dasar Database MySQL, Oracle</li>
+			<li>Bersedia ditempatkan di Green Garden Jakarta Barat</li>
+			<li>Minimal pernah membuat 2 aplikasi dengan PHP</li>
+      	</ul>
+        <ion-item class="item" style="border:0px;">
+            <h2>Job Description</h2>
+        </ion-item>
+        <ul>
+        	<li>
+        		Candidate must possess at least a Bachelor&#39;s Degree, Computer Science/Information Technology or equivalent.
+			</li>
+			<li>
+				At least 2 year(s) of working experience in the related field is required for this position.</li>
+			<li>
+				Preferably Staff (non-management &amp; non-supervisor)s specializing in IT/Computer - Software or equivalent.
+			</li>
+			<li>Full-Time position(s) available.</li>
+			<li>Hands on experience with various programming languages, like PHP and Javascript.</li>
+			<li>Familiar with PHP Framework like Codeigniter</li>
+			<li>Familiarity working with HTML/CSS and SQL would be advantage.</li>
+			<li>Familiar with API.</li>
+			<li>Understand security and web performance improvement.</li>
+			<li>Attention to detail.</li>
+			<li>Good team player, able to communicate and work within a team.</li>
+			<li>Great problem solving skills and analytical skills.</li>
+			<li>Self motivated and well organized.</li>
+			<li>Able to work under pressure and able to meet deadline.</li>
+			<li>Have experiences in hospitality is preferred.</li>
+		</ul>
+      	<ion-item class="item" style="border:0px;">
+            <h2>Qualifications</h2>
+        </ion-item>
+        <ul>
+			<li>Usia maksimal 35 thn</li>
+			<li>Pendidikan S1 Komputer / Teknik Informatika / Ilmu Komputer</li>
+			<li>Pengalaman minimal 3 tahun di posisi yang sama</li>
+			<li>Menguasai&nbsp;HTML, CSS, Javascript, PHP &nbsp;&amp; Asp.net (C#), Database Query ( MySQL &amp; SQLServer ), REST &ndash; JSON Data</li>
+			<li>Pernah membuat web</li>
+			<li>Menguasai DB Oracle lebih disukai</li>
+			<li>Menguasai Framework lebih disukai</li>
+			<li>Menguasai CSS untuk cross browser lebih disukai</li>
+			<li>Penempatan : Kantor Pusat - Jakarta Timur</li></br>
+		</ul>
+    </div>
+    <ion-item>
+	    <button class="button button-positive button-block" ng-click="melamarsekarang()">
+	    	Melamar Sekarang
+	    </button>
+    </ion-item>
+  </ion-content>
+</ion-view>

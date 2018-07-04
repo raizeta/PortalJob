@@ -1,0 +1,42 @@
+<ion-view view-title="JobStreet.com">
+    <ion-nav-buttons side="right">
+      <a class="button button-icon icon  ion-funnel" href="#/tab/lowongankerja/filter" >
+      </a>
+    </ion-nav-buttons>
+  <ion-content class="layerbackground">
+    <div class="list card no-padding" style="margin-bottom: 15px;" ng-repeat="lowongan in datalowongan|filterWithOr:{'LOKASI_PERUSAHAAN':filterpropinsi,'NAMA_LOWONGAN':filternamalowongan}">
+        <ion-item class="item item-remove-animate item-avatar item-icon-right item-stable" type="item-text-wrap" style="padding-left: 72px;">
+            <img ng-src="img/lg_token.png" ng-click="gotomelamar(lowongan)">
+            <h2 ng-click="gotomelamar(lowongan)">{{lowongan.NAMA_LOWONGAN}}</h2>
+            <h2 ng-click="gotomelamar(lowongan)">{{lowongan.NAMA_PERUSAHAAN}}</h2>
+            <i class="icon ion-star" ng-class="{emas: apakahdisimpan(lowongan)}" ng-click="addorremove(lowongan)" style="font-size: 36px;"></i>
+        </ion-item>
+        <div ng-click="gotomelamar(lowongan)">
+          <ion-item class="item-icon-left item-icon-right" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+            <i class="icon ion-ios-location-outline"></i>
+              <h2>{{lowongan.LOKASI_PERUSAHAAN}}</h2>
+          </ion-item>
+          <ion-item class="item-icon-left item-icon-right" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+            <i class="icon ion-cash placeholder-icon"></i>
+              <h2>Rp {{lowongan.MIN_GAJI|number}} - {{lowongan.MAX_GAJI|number}}</h2>
+          </ion-item>
+          <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+            <i class="icon ion-android-time"></i>
+              <h2>{{lowongan.TGL_BUKALOWONGAN}}</h2>
+          </ion-item>
+          <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+            <i class="icon ion-ios-alarm-outline"></i>
+              <h2>{{lowongan.TGL_TUTUPLOWONGAN}}</h2>
+          </ion-item>
+        </div>
+    </div>
+    <div ng-if="datalowongan.length == 0">
+      <div class="row not-found">
+        <div class="profile">
+            <img ng-src="img/kg.png"/>
+            <h3 style="color: #444;margin-top: -1vh;">Lowongan Masih Kosong</h3>
+        </div>
+      </div>
+    </div>  
+  </ion-content>
+</ion-view>

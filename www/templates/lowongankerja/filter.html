@@ -1,0 +1,40 @@
+<ion-view  hide-nav-bar="false" title="Filter">
+    <ion-content padding="true" scroll="true" has-bouncing="true" class="layerbackground">
+              <form name="registrasiForm" novalidate="true">
+              <ion-item>
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Posisi Pekerjan,Kata Kunci</span>
+                  <input type="text" name="alamatemail" ng-model="namalowongan.namalowongan"  class="custom-success">
+                </label>
+                </ion-item>
+                <ion-item class="item-icon-right" style="margin-top:15px;" ng-click="modalprovinsiopen()">
+                    <h2>{{filterpropinsi.length}} Lokasi Terpilih</h2>
+                    <i class="icon ion-chevron-right"></i>
+                </ion-item>
+<!--                 <ion-item class="item-icon-right" style="margin-top:15px;">
+                    <h2>Gaji Yang Diharapkan: Rp. {{data.volume * 500000|number}}</h2>
+                    
+                </ion-item>
+                <div class="item range range-positive">
+                  <i class="icon ion-minus" ng-click=""></i>
+                    <input type="range" name="volume" ng-model="data.volume" min="3" max="40">
+                  <i class="icon ion-plus"></i>
+                </div> -->
+                
+
+<!--                 <ion-item class="item-icon-right" style="margin-top:15px;">
+                    <h2>Spesialiasi</h2>
+                    <i class="icon ion-chevron-right"></i>
+                </ion-item>
+
+                <ion-item class="item-icon-right" style="margin-top:15px;margin-bottom: 15px;">
+                    <h2>Tingkat Posisi</h2>
+                    <i class="icon ion-chevron-right"></i>
+                </ion-item> -->
+
+                <button  class="button button-block button-calm" ng-click="simpansemuafilter()">
+                  Simpan
+                </button>
+              </form>
+  </ion-content>
+</ion-view>

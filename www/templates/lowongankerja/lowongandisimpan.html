@@ -1,0 +1,36 @@
+<ion-view view-title="Lowongan Yang Disimpan">
+  <ion-content class="layerbackground">
+    <div class="list card no-padding" style="margin-bottom: 15px;" ng-repeat="lowongan in datalowongan" ng-if="apakahdisimpan(lowongan)">
+        <ion-item class="item item-remove-animate item-avatar item-icon-right item-stable" type="item-text-wrap" style="padding-left: 72px;">
+            <img ng-src="img/lg_token.png">
+            <h2>{{lowongan.NAMA_LOWONGAN}}</h2>
+            <h2>{{lowongan.NAMA_PERUSAHAAN}}</h2>
+            <i class="icon ion-star" ng-class="{emas: apakahdisimpan(lowongan)}" ng-click="addorremove(lowongan)" style="font-size: 36px;"></i>
+        </ion-item>
+        <ion-item class="item-icon-left item-icon-right" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+          <i class="icon ion-ios-location-outline"></i>
+            <h2>{{lowongan.LOKASI_PERUSAHAAN}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left item-icon-right" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+          <i class="icon ion-cash placeholder-icon"></i>
+            <h2>Rp {{lowongan.MIN_GAJI|number}} - {{lowongan.MAX_GAJI|number}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+          <i class="icon ion-android-time"></i>
+            <h2>{{lowongan.TGL_BUKALOWONGAN}}</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;">
+          <i class="icon ion-ios-alarm-outline"></i>
+            <h2>{{lowongan.TGL_TUTUPLOWONGAN}}</h2>
+        </ion-item>
+    </div>
+    <div ng-if="lowongantersimpan.length == 0">
+        <div class="row not-found">
+          <div class="profile">
+              <img ng-src="img/kg.png"/>
+              <h3 style="color: #444;margin-top: -1vh;">Lowongan Tersimpan Kosong</h3>
+          </div>
+        </div>
+    </div>  
+  </ion-content>
+</ion-view>

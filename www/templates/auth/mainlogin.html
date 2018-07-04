@@ -1,0 +1,21 @@
+<!-- <ion-view view-title="KONTROL GAMPANG" name="login-view">
+  <ion-nav-bar class="bar-dark"></ion-nav-bar>
+      <ion-nav-view name="login-tab"></ion-nav-view>
+</ion-view>
+ -->
+<ion-nav-bar class="bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+</ion-nav-bar>
+<ion-tabs class="tabs-icon-top  tabs-background-balanced tabs-color-active-stable">
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="SIGN IN" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/auth/login">
+    <ion-nav-view name="login-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="SIGN UP" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/auth/registrasi">
+    <ion-nav-view name="registrasi-tab"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>
