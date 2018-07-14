@@ -1,0 +1,42 @@
+<ion-view  hide-nav-bar="false" title="Data Bahasa">
+  <ion-content padding="true" scroll="true" has-bouncing="true" class="layerbackground">
+    <ion-list>
+      <ion-item>
+        <form name="dataBahasaForm" novalidate="true">
+          <label class="item item-input item-stacked-label border-bottom" ng-click="pilihkualifikasipendidikan()">
+           <span class="input-label">Pilih Bahasa</span>
+            <input type="text" ng-model="dataBahasa.kualifikasi" ng-readonly="true" class="custom-success" ng-disabled="true" style="background-color: white" required="true">
+          </label>
+          <label class="item item-input item-stacked-label border-bottom">
+           <span class="input-label">Kemampuan Membaca: {{dataBahasa.membaca}}</span>
+          </label>
+          <div class="item range range-positive">
+            <i class="icon ion-minus" ng-click=""></i>
+              <input type="range" name="volume" ng-model="dataBahasa.membaca" min="0" max="10">
+            <i class="icon ion-plus"></i>
+          </div>
+          <label class="item item-input item-stacked-label border-bottom">
+           <span class="input-label">Kemampuan Menulis: {{dataBahasa.menulis}}</span>
+          </label>
+          <div class="item range range-positive">
+            <i class="icon ion-minus" ng-click=""></i>
+              <input type="range" name="volume" ng-model="dataBahasa.menulis" min="0" max="10">
+            <i class="icon ion-plus"></i>
+          </div>
+          <label class="item item-input item-stacked-label border-bottom">
+           <span class="input-label">Kemampuan Berbicara: {{dataBahasa.berbicara}}</span>
+          </label>
+          <div class="item range range-positive">
+            <i class="icon ion-minus" ng-click=""></i>
+              <input type="range" name="volume" ng-model="dataBahasa.berbicara" min="0" max="10">
+            <i class="icon ion-plus"></i>
+          </div>
+
+          <button  class="button button-block button-calm" ng-click="submitdatabahasa()" ng-disabled="dataBahasaForm.$invalid">
+            Simpan
+          </button>
+        </form>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

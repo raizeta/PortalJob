@@ -1,0 +1,45 @@
+<ion-view  hide-nav-bar="false" title="Data Pribadi">
+    <ion-content padding="true" scroll="true" has-bouncing="true" class="layerbackground">
+      <ion-list>
+        <ion-item>
+          <form name="dataPribadiForm" novalidate="true">
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Nama Lengkap</span>
+              <input type="text" name="namalengkap" ng-model="dataPribadi.NAMA_LENGKAP"  class="custom-success" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Email</span>
+              <input type="email" name="alamatemail" ng-model="dataPribadi.ALAMAT_EMAIL"  class="custom-success" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Nomor Handphone</span>
+              <input type="text" name="nomorhandphone" ng-model="dataPribadi.NOMOR_HANDPHONE"  class="custom-success" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+              <span class="input-label">Tempat Lahir</span>
+              <input type="text" name="tptlahir" ng-model="dataPribadi.LAHIR_TEMPAT" placeholder="Masukkan Tempat Lahir Anda Disini" class="custom-success" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+              <span class="input-label">Tanggal Lahir</span>
+              <input type="date" name="tgllahir" ng-model="dataPribadi.LAHIR_TGL" placeholder="Masukkan Tanggal Lahir Anda Disini" class="custom-success" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom" ng-click="pilihjeniskelamin()">
+              <span class="input-label">Jenis Kelamin</span>
+              <input type="text" name="jeskel" ng-model="dataPribadi.LAHIR_GENDER" placeholder="Masukkan Jenis Kelamin Anda Disini" class="custom-success" ng-readonly="true" ng-disabled="true" style="background-color: white;" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom" ng-click="pilihstatuspernikahan('create')">
+             <span class="input-label">Status Pernikahan</span>
+              <input type="text" name="stspernikahan" ng-model="dataPribadi.STS_NIKAH" class="custom-success" placeholder="Masukkan Status Pernikahan Disini" required>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Alamat Lengkap</span>
+              <input type="text" name="alamatlengkap" ng-model="dataPribadi.ALAMAT_LENGKAP" class="custom-success" placeholder="Masukkan Alamat Lengkap Disini" required>
+            </label>
+            <button  class="button button-block button-calm" ng-click="submitdatapribadi()" ng-disabled="dataPribadiForm.$invalid">
+              Simpan
+            </button>
+          </form>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

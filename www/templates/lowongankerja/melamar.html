@@ -16,6 +16,10 @@
             <i class="icon ion-cash placeholder-icon"></i>
               <h2>Rp {{lowongan.MIN_GAJI|number}} - {{lowongan.MAX_GAJI|number}}</h2>
           </ion-item>
+          <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;" ng-if="indexdilamaranku != -1">
+            <i class="icon ion-information"></i>
+              <h2>Sudah Dilamar</h2>
+          </ion-item>
       	</div>
     </div>
     <div class="list card no-padding">
@@ -75,7 +79,7 @@
 			<li>Penempatan : Kantor Pusat - Jakarta Timur</li></br>
 		</ul>
     </div>
-    <ion-item>
+    <ion-item ng-if="indexdilamaranku == -1">
 	    <button class="button button-positive button-block" ng-click="melamarsekarang()">
 	    	Melamar Sekarang
 	    </button>

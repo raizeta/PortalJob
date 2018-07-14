@@ -112,7 +112,7 @@ angular.module('starter')
   })
   .state('tab.lowongankerja-melamar', 
   {
-      url: '/lowongankerjayangdilamar/melamar',
+      url: '/melamar',
       views: 
       {
         'tab-lowongan': 
@@ -129,6 +129,16 @@ angular.module('starter')
         'tab-lowongandisimpan': {
           templateUrl: 'templates/lowongankerja/lowongandisimpan.html',
           controller: 'DashCtrl'
+        }
+      }
+  })
+  .state('tab.lowongandisimpan-melamar', 
+  {
+      url: '/lowongandisimpan/melamar',
+      views: {
+        'tab-lowongandisimpan': {
+          templateUrl: 'templates/lowongankerja/melamar.html',
+          controller: 'MelamarCtrl'
         }
       }
   })
@@ -151,8 +161,8 @@ angular.module('starter')
       {
           'lamaranku-new': 
           {
-              templateUrl: "templates/lamaranku/topup-new.html",
-              controller: 'DashCtrl'
+              templateUrl: "templates/lamaranku/lamaranku-aktif.html",
+              controller: 'LamaranKuCtrl'
           }
       },
   })
@@ -163,8 +173,8 @@ angular.module('starter')
       {
           'lamaranku-end': 
           {
-              templateUrl: "templates/lamaranku/topup-history.html",
-              controller: 'DashCtrl'
+              templateUrl: "templates/lamaranku/lamaranku-yanglalu.html",
+              controller: 'LamaranKuCtrl'
           }
       },
   })
@@ -177,11 +187,40 @@ angular.module('starter')
       }
     }
   })
+
   .state('tab.profile', {
     url: '/profile',
     views: {
       'tab-profile': {
         templateUrl: 'templates/profile/index.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.profile-datapribadi', {
+    url: '/profile/datapribadi',
+    views: {
+      'tab-profile': {
+        templateUrl: 'templates/profile/datapribadi.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+  .state('tab.profile-pendidikan', {
+    url: '/profile/pendidikan',
+    views: {
+      'tab-profile': {
+        templateUrl: 'templates/profile/pendidikan.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+  .state('tab.profile-bahasa', {
+    url: '/profile/bahasa',
+    views: {
+      'tab-profile': {
+        templateUrl: 'templates/profile/bahasa.html',
         controller: 'AccountCtrl'
       }
     }

@@ -4,7 +4,7 @@
       </a>
     </ion-nav-buttons>
   <ion-content class="layerbackground">
-    <div class="list card no-padding" style="margin-bottom: 15px;" ng-repeat="lowongan in datalowongan|filterWithOr:{'LOKASI_PERUSAHAAN':filterpropinsi,'NAMA_LOWONGAN':filternamalowongan}">
+    <div class="list card no-padding" style="margin-bottom: 15px;" ng-repeat="lowongan in datalowongan|filterWithOr:{'LOKASI_PERUSAHAAN':filterpropinsi,'NAMA_LOWONGAN':filternamalowongan} as filtering track by $index">
         <ion-item class="item item-remove-animate item-avatar item-icon-right item-stable" type="item-text-wrap" style="padding-left: 72px;">
             <img ng-src="img/lg_token.png" ng-click="gotomelamar(lowongan)">
             <h2 ng-click="gotomelamar(lowongan)">{{lowongan.NAMA_LOWONGAN}}</h2>
@@ -28,9 +28,14 @@
             <i class="icon ion-ios-alarm-outline"></i>
               <h2>{{lowongan.TGL_TUTUPLOWONGAN}}</h2>
           </ion-item>
+          <ion-item class="item-icon-left" type="item-text-wrap" style="padding-left: 60px;left: 10px;" >
+            <i class="icon ion-information"></i>
+              <h2 ng-if="apakahsudahdilamar(lowongan)">Sudah Dilamar</h2>
+              <h2 ng-if="!apakahsudahdilamar(lowongan)">Belum Dilamar</h2>
+          </ion-item>
         </div>
     </div>
-    <div ng-if="datalowongan.length == 0">
+    <div ng-if="filtering.length == 0">
       <div class="row not-found">
         <div class="profile">
             <img ng-src="img/kg.png"/>

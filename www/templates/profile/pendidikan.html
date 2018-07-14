@@ -1,0 +1,42 @@
+<ion-view  hide-nav-bar="false" title="Data Pendidikan">
+  <ion-content padding="true" scroll="true" has-bouncing="true" class="layerbackground">
+    <ion-list>
+      <ion-item>
+          <form name="dataPendidikanForm" novalidate="true">
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Kualifikasi Pendidikan</span>
+            </label>
+            <ion-item class="item-icon-right item-stable" ng-click="pilihkualifikasipendidikan()">
+                <h2>{{dataPendidikan.kualifikasi}}</h2>
+                <i class="icon ion-chevron-right"></i>
+            </ion-item>
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Nama Instansi</span>
+              <input type="text" name="namainstansi" ng-model="dataPendidikan.NAMA_INSTANSI"  class="custom-success" required>
+            </label>
+            <div class="row" style="flex-wrap: wrap;">
+              <div class="col col-50">
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Tahun Masuk</span>
+                  <input type="month" name="tahunmasuk" ng-model="dataPendidikan.TAHUN_MASUK" class="custom-success" required>
+                </label>
+              </div>
+              <div class="col col-50">
+                <label class="item item-input item-stacked-label border-bottom">
+                 <span class="input-label">Tahun Lulus</span>
+                  <input type="month" name="tahunlulus" ng-model="dataPendidikan.TAHUN_LULUS" class="custom-success" required>
+                </label>
+              </div>
+            </div>
+            <label class="item item-input item-stacked-label border-bottom">
+             <span class="input-label">Index Prestasi Kumulatif</span>
+              <input type="tel" format="number" name="ipk" ng-model="dataPendidikan.IPK"  class="custom-success" required>
+            </label>
+            <button  class="button button-block button-calm" ng-click="submitdatapendidikan()" ng-disabled="dataPendidikanForm.$invalid">
+              Simpan
+            </button>
+          </form>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
